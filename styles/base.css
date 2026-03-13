@@ -133,6 +133,12 @@ section.card {
     flex-direction: column;
 }
 
+h2 {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+}
+
+
 section.card h2 {
     background-color: var(--primary-color);
     /* Black title bar */
