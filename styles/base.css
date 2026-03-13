@@ -5,8 +5,6 @@
     /* Accent: Professional Cobalt */
     --accent-color: #5A5F66;
     /* Secondary Text: Medium Graphite */
-    --text-color: #1B1D20;
-    /* General Text Color matching primary */
     --bg-color: #FFFFFF;
     /* Main Background: Stark White */
 }
@@ -20,7 +18,7 @@
 
 body {
     background-color: var(--bg-color);
-    color: var(--text-color);
+    color: var(--primary-color);
     padding: 0 5%;
 }
 
@@ -36,7 +34,7 @@ header {
     align-items: center;
     padding: 1rem;
     background-color: var(--bg-color);
-    color: var(--text-color);
+    color: var(--primary-color);
     margin-top: 1rem;
 }
 
@@ -48,7 +46,7 @@ header img {
 
 header span {
     font-size: 1.5rem;
-    color: var(--text-color);
+    color: var(--primary-color);
 
     margin-right: auto;
     /* This pushes the hamburger menu to the right */
@@ -91,7 +89,7 @@ header span {
     flex-direction: column;
     margin: 0;
     padding: 0;
-    background-color: var(--text-color);
+    background-color: var(--primary-color);
 }
 
 .navigation a {
@@ -135,9 +133,9 @@ section.card {
 }
 
 section.card h2 {
-    background-color: var(--text-color);
+    background-color: var(--primary-color);
     /* Black title bar */
-    color: #fff;
+    color: var(--bg-color);
     margin: 0;
     border-bottom: none;
     display: block;
@@ -168,22 +166,22 @@ section.card img {
 }
 
 .category-buttons button {
-    background-color: var(--primary-color);
-    color: var(--bg-color);
-    border: none;
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
     padding: 0.6rem 1.2rem;
     flex-grow: 1;
     /* evenly spaced */
     text-align: center;
     cursor: pointer;
     font-size: 1rem;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
     border-radius: 4px;
 }
 
 .category-buttons button:hover {
     background-color: var(--secondary-color);
-    /* Hover shifts to Professional Cobalt */
+    color: var(--bg-color);
 }
 
 .course-list {
