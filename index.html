@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BYU-Idaho WDD231</title>
+    <meta name="description" content="Brandon Chinchilla's WDD231 course page">
+    <meta name="author" content="Brandon Chinchilla">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script defer src="scripts/dates.js"></script>
+    <script defer src="scripts/course.js"></script>
+    <script defer src="scripts/navigation.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/home.svg" alt="Site Logo" width="512" height="512">
+        <span> Brandon's Site Title</span>
+        <button id="ham-btn" class="hamburger"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li class="current"><a href="#">Home</a></li>
+            <li><a href="#">Chamber Project</a></li>
+            <li><a href="#">Final Project</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Home</h1>
+        <section class="card">
+            <h2>About Me</h2>
+            <p>I am a student at BYU-Idaho, majoring in Computer Science.</p>
+        </section>
+        <section class="card">
+            <h2>Student Photo</h2>
+            <img src="images/brandon-chinchilla.webp" alt="Student Photo" width="512" height="512">
+        </section>
+        <section class="card full-width">
+            <h2>Web Certificate Courses</h2>
+            <div class="category-buttons">
+                <button id="all-btn">All</button>
+                <button id="cse-btn">CSE</button>
+                <button id="wdd-btn">WDD</button>
+            </div>
+            <ul id="course-list" class="course-list">
+                <!-- Courses injected via JavaScript -->
+            </ul>
+            <p id="total-credits" style="text-align: center; margin-top: 1rem; font-weight: bold;"></p>
+        </section>
+    </main>
+    <footer>
+        <div class="social-links">
+            <a href="#"><img src="images/github.svg" alt="GitHub" width="44" height="44"></a>
+            <a href="#"><img src="images/linkedin.svg" alt="LinkedIn" width="44" height="44"></a>
+            <a href="#"><img src="images/instagram.svg" alt="Instagram" width="44" height="44"></a>
+        </div>
+        <p>&copy; <span id="current-year"></span> Brandon Chinchilla Guatemala, Guatemala </p>
+        <p>Last Updated: <span id="last-modified"></span></p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+@media only screen and (min-width: 38rem) {
+
+    .hamburger {
+        display: none;
+    }
+
+    .navigation {
+        display: block;
+        margin-top: 0;
+    }
+
+    .navigation ul {
+        flex-direction: row;
+        justify-content: flex-start;
+        border-radius: 0; /* flat bar spanning width */
+    }
+
+    .navigation a {
+        border-top: none;
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 1rem 2rem;
+    }
+
+    .navigation li:first-child a {
+        border-left: none;
+    }
+
+    /* Multi-column Grid Layout for wider screens */
+    main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1.5rem;
+    }
+
+    main h1 {
+        grid-column: 1 / -1;
+    }
+
+    /* About me naturally on left (col 1), Student Photo on right (col 2) */
+
+    section.full-width {
+        grid-column: 1 / -1;
+    }
+}
