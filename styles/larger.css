@@ -13,6 +13,8 @@
         flex-direction: row;
         justify-content: flex-start;
         border-radius: 0;
+        background-color: var(--primary-color);
+        color: var(--bg-color);
         /* flat bar spanning width */
     }
 
