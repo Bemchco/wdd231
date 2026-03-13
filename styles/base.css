@@ -1,12 +1,14 @@
 :root {
-    --primary-color: #0F3057;
-    /* Deep Blue */
-    --secondary-color: #008891;
-    /* Teal */
-    --accent-color: #E7E7DE;
-    /* Light Gray Accent */
-    --text-color: #333333;
+    --primary-color: #1B1D20;
+    /* Primary Text: Ink Black */
+    --secondary-color: #0950C3;
+    /* Accent: Professional Cobalt */
+    --accent-color: #5A5F66;
+    /* Secondary Text: Medium Graphite */
+    --text-color: #1B1D20;
+    /* General Text Color matching primary */
     --bg-color: #FFFFFF;
+    /* Main Background: Stark White */
 }
 
 * {
@@ -56,12 +58,12 @@ header span {
 
 /*Navigation*/
 .hamburger {
-    background: #ddd;
-    /* Light gray box per wireframe */
-    border: 1px solid #999;
+    background: #f4f4f4;
+    /* Subtle off-white to contrast against stark white */
+    border: 1px solid var(--accent-color);
     font-size: 2.2rem;
     cursor: pointer;
-    color: #000;
+    color: var(--primary-color);
     padding: 0.1rem 0.6rem;
     border-radius: 4px;
     display: flex;
@@ -127,10 +129,10 @@ main h1 {
 }
 
 section.card {
-    background: var(--accent-color);
+    background: var(--bg-color); /* Matches stark white */
     padding: 0;
     margin-bottom: 1.5rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--accent-color);
     display: flex;
     /* Added for better content containment */
     flex-direction: column;
@@ -170,9 +172,9 @@ section.card img {
 }
 
 .category-buttons button {
-    background-color: #ddd;
-    color: #000;
-    border: 1px solid #aaa;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border: none;
     padding: 0.6rem 1.2rem;
     flex-grow: 1;
     /* evenly spaced */
@@ -184,7 +186,7 @@ section.card img {
 }
 
 .category-buttons button:hover {
-    background-color: #bbb;
+    background-color: var(--secondary-color); /* Hover shifts to Professional Cobalt */
 }
 
 .course-list {
@@ -196,8 +198,9 @@ section.card img {
 }
 
 .course-list li {
-    background-color: #ddd;
-    border: 1px solid #aaa;
+    background-color: #f9f9f9; /* Super subtle contrast against Stark White */
+    border: 1px solid var(--accent-color);
+    color: var(--primary-color);
     padding: 1rem;
     text-align: center;
     border-radius: 4px;
@@ -205,19 +208,19 @@ section.card img {
 
 .course-list li.completed {
     background-color: var(--secondary-color);
-    /* Matches the teal scheme */
-    color: #fff;
+    /* Completed course turns Terracotta */
+    color: var(--bg-color);
     border-color: var(--primary-color);
 }
 
 /*Footer*/
 footer {
-    background-color: var(--accent-color);
+    background-color: var(--primary-color);
     text-align: center;
-    color: var(--text-color);
+    color: var(--bg-color);
     padding: 1.5rem;
     margin-bottom: 1rem;
-    border-top: 1px solid #ccc;
+    border-top: 5px solid var(--secondary-color);
 }
 
 .social-links {
