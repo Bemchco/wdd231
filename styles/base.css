@@ -129,7 +129,8 @@ main h1 {
 }
 
 section.card {
-    background: var(--bg-color); /* Matches stark white */
+    background: var(--bg-color);
+    /* Matches stark white */
     padding: 0;
     margin-bottom: 1.5rem;
     border: 1px solid var(--accent-color);
@@ -186,7 +187,8 @@ section.card img {
 }
 
 .category-buttons button:hover {
-    background-color: var(--secondary-color); /* Hover shifts to Professional Cobalt */
+    background-color: var(--secondary-color);
+    /* Hover shifts to Professional Cobalt */
 }
 
 .course-list {
@@ -198,7 +200,8 @@ section.card img {
 }
 
 .course-list li {
-    background-color: #f9f9f9; /* Super subtle contrast against Stark White */
+    background-color: #f9f9f9;
+    /* Super subtle contrast against Stark White */
     border: 1px solid var(--accent-color);
     color: var(--primary-color);
     padding: 1rem;
@@ -215,9 +218,9 @@ section.card img {
 
 /*Footer*/
 footer {
-    background-color: var(--primary-color);
+    background-color: var(--bg-color);
     text-align: center;
-    color: var(--bg-color);
+    color: var(--primary-color);
     padding: 1.5rem;
     margin-bottom: 1rem;
     border-top: 5px solid var(--secondary-color);

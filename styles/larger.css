@@ -12,7 +12,8 @@
     .navigation ul {
         flex-direction: row;
         justify-content: flex-start;
-        border-radius: 0; /* flat bar spanning width */
+        border-radius: 0;
+        /* flat bar spanning width */
     }
 
     .navigation a {
