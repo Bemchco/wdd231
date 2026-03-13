@@ -1,7 +1,10 @@
 :root {
-    --primary-color: #0F3057; /* Deep Blue */
-    --secondary-color: #008891; /* Teal */
-    --accent-color: #E7E7DE; /* Light Gray Accent */
+    --primary-color: #0F3057;
+    /* Deep Blue */
+    --secondary-color: #008891;
+    /* Teal */
+    --accent-color: #E7E7DE;
+    /* Light Gray Accent */
     --text-color: #333333;
     --bg-color: #FFFFFF;
 }
@@ -30,8 +33,10 @@ header {
     display: flex;
     align-items: center;
     padding: 1rem;
-    background-color: var(--bg-color); /* White per wireframe */
-    color: var(--text-color); /* Black per wireframe */
+    background-color: var(--bg-color);
+    /* White per wireframe */
+    color: var(--text-color);
+    /* Black per wireframe */
     margin-top: 1rem;
 }
 
@@ -43,13 +48,16 @@ header img {
 
 header span {
     font-size: 1.5rem;
-    color: var(--text-color); /* Black per wireframe */
-    margin-right: auto; /* This pushes the hamburger menu to the right */
+    color: var(--text-color);
+    /* Black per wireframe */
+    margin-right: auto;
+    /* This pushes the hamburger menu to the right */
 }
 
 /*Navigation*/
 .hamburger {
-    background: #ddd; /* Light gray box per wireframe */
+    background: #ddd;
+    /* Light gray box per wireframe */
     border: 1px solid #999;
     font-size: 2.2rem;
     cursor: pointer;
@@ -84,7 +92,8 @@ header span {
     flex-direction: column;
     margin: 0;
     padding: 0;
-    background-color: var(--text-color); /* Black per wireframe */
+    background-color: var(--text-color);
+    /* Black per wireframe */
 }
 
 .navigation a {
@@ -92,19 +101,20 @@ header span {
     color: #fff;
     padding: 1rem;
     display: block;
-    text-align: left; /* Left aligned on mobile per wireframe */
+    text-align: left;
+    /* Left aligned on mobile per wireframe */
     padding-left: 1.5rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .navigation li.current a {
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255, 255, 255, 0.2);
     font-weight: 700;
 }
 
 .navigation li a:hover {
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 /*Main & Sections*/
@@ -121,12 +131,14 @@ section.card {
     padding: 0;
     margin-bottom: 1.5rem;
     border: 1px solid #ccc;
-    display: flex; /* Added for better content containment */
+    display: flex;
+    /* Added for better content containment */
     flex-direction: column;
 }
 
 section.card h2 {
-    background-color: var(--text-color); /* Black title bar */
+    background-color: var(--text-color);
+    /* Black title bar */
     color: #fff;
     margin: 0;
     border-bottom: none;
@@ -135,7 +147,7 @@ section.card h2 {
     text-align: center;
 }
 
-section.card > :not(h2) {
+section.card> :not(h2) {
     margin: 1rem;
 }
 
@@ -143,14 +155,16 @@ section.card > :not(h2) {
 section.card img {
     max-width: 100%;
     height: auto;
-    align-self: center; /* Center the image in the card */
+    align-self: center;
+    /* Center the image in the card */
     margin: 1rem auto;
     display: block;
 }
 
 .category-buttons {
     display: flex;
-    flex-wrap: wrap; /* allow wrapping on real small screens */
+    flex-wrap: wrap;
+    /* allow wrapping on real small screens */
     gap: 1rem;
     justify-content: center;
 }
@@ -160,7 +174,8 @@ section.card img {
     color: #000;
     border: 1px solid #aaa;
     padding: 0.6rem 1.2rem;
-    flex-grow: 1; /* evenly spaced */
+    flex-grow: 1;
+    /* evenly spaced */
     text-align: center;
     cursor: pointer;
     font-size: 1rem;
@@ -189,7 +204,8 @@ section.card img {
 }
 
 .course-list li.completed {
-    background-color: var(--secondary-color); /* Matches the teal scheme */
+    background-color: var(--secondary-color);
+    /* Matches the teal scheme */
     color: #fff;
     border-color: var(--primary-color);
 }
@@ -228,4 +244,10 @@ footer {
 .social-links img {
     width: 32px;
     height: 32px;
+}
+
+#total-credits {
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: bold;
 }
