@@ -40,6 +40,10 @@
     }
 
     /* About me naturally on left (col 1), Student Photo on right (col 2) */
+    h2 {
+        background-color: var(--primary-color);
+        color: var(--bg-color);
+    }
 
     section.full-width {
         grid-column: 1 / -1;
