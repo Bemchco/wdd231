@@ -1,13 +1,9 @@
-/* chamber.css - Mobile First Styles */
-
-/* CSS Variables */
 :root {
-  /* Colors from your base.css */
   --primary-color: #1B1D20;
   --secondary-color: #0950C3;
   --accent-color: #5A5F66;
   --bg-color: #FFFFFF;
-  
+
   --text-color: var(--primary-color);
   --header-bg: var(--bg-color);
   --card-bg: #f9f9f9;
@@ -19,7 +15,7 @@
 
 [data-theme="dark"] {
   --primary-color: #FFFFFF;
-  --secondary-color: #6495ED; /* Lighter blue for dark mode */
+  --secondary-color: #6495ED;
   --bg-color: #1B1D20;
   --text-color: #FFFFFF;
   --header-bg: #1B1D20;
@@ -29,7 +25,6 @@
   --footer-text: #FFFFFF;
 }
 
-/* Base Styles */
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -89,7 +84,7 @@ button {
   border: 1px solid var(--accent-color);
   font-size: 2.2rem;
   cursor: pointer;
-  color: #1B1D20; 
+  color: #1B1D20;
   padding: 0.1rem 0.6rem;
   border-radius: 4px;
   display: flex;
@@ -132,7 +127,8 @@ nav a {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-nav a:hover, nav a.active {
+nav a:hover,
+nav a.active {
   background-color: var(--accent-color);
   font-weight: 700;
 }
@@ -160,13 +156,13 @@ main {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.view-toggles button.active, .view-toggles button:hover {
+.view-toggles button.active,
+.view-toggles button:hover {
   background-color: var(--secondary-color);
   color: #FFF;
   border-color: var(--secondary-color);
 }
 
-/* Grid/List View Base Setup (Mobile first behaves like a single column list/grid) */
 #members-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -208,7 +204,6 @@ main {
   margin: 0;
 }
 
-/* Hidden image natively for list-view explicitly requested on mobile? Actually we'll let mobile just stack it, but hide img strictly if list-view */
 .list-view .member-card img {
   display: none;
 }

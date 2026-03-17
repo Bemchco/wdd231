@@ -1,6 +1,4 @@
-// Update exact footer dates
-document.getElementById('currentyear').textContent = new Date().getFullYear();
-document.getElementById('lastModified').textContent = document.lastModified;
+
 
 // Dark Mode Toggle
 const darkModeToggle = document.getElementById('dark-mode-toggle');
@@ -53,7 +51,7 @@ if (membersContainer) {
         members.forEach(member => {
             const card = document.createElement('div');
             card.classList.add('member-card');
-            
+
             card.innerHTML = `
                 <img src="${member.image}" alt="${member.name} Logo" loading="lazy" width="100" height="100">
                 <h3>${member.name}</h3>
