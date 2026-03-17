@@ -1,0 +1,257 @@
+/* chamber.css - Mobile First Styles */
+
+/* CSS Variables */
+:root {
+  /* Colors from your base.css */
+  --primary-color: #1B1D20;
+  --secondary-color: #0950C3;
+  --accent-color: #5A5F66;
+  --bg-color: #FFFFFF;
+  
+  --text-color: var(--primary-color);
+  --header-bg: var(--bg-color);
+  --card-bg: #f9f9f9;
+  --nav-bg: var(--primary-color);
+  --nav-text: var(--bg-color);
+  --footer-bg: var(--bg-color);
+  --footer-text: var(--primary-color);
+}
+
+[data-theme="dark"] {
+  --primary-color: #FFFFFF;
+  --secondary-color: #6495ED; /* Lighter blue for dark mode */
+  --bg-color: #1B1D20;
+  --text-color: #FFFFFF;
+  --header-bg: #1B1D20;
+  --card-bg: #2A2D32;
+  --nav-bg: #2A2D32;
+  --footer-bg: #1B1D20;
+  --footer-text: #FFFFFF;
+}
+
+/* Base Styles */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  font-family: 'Roboto', sans-serif;
+  padding: 0 2%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Header */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--header-bg);
+  margin-top: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1 1 auto;
+}
+
+.logo img {
+  width: 3rem;
+}
+
+.logo h1 {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.header-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+#hamburger-menu {
+  background: #f4f4f4;
+  border: 1px solid var(--accent-color);
+  font-size: 2.2rem;
+  cursor: pointer;
+  color: #1B1D20; 
+  padding: 0.1rem 0.6rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+[data-theme="dark"] #hamburger-menu {
+  background: #2A2D32;
+  color: #FFFFFF;
+  border-color: #5A5F66;
+}
+
+/* Navigation */
+nav {
+  background-color: var(--nav-bg);
+  margin-top: 1rem;
+}
+
+nav ul {
+  display: none;
+  list-style: none;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul.show {
+  display: flex;
+}
+
+nav a {
+  display: block;
+  padding: 1rem 1.5rem;
+  color: var(--nav-text);
+  text-decoration: none;
+  font-weight: 500;
+  text-align: left;
+  border-top: 1px solid var(--accent-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+  background-color: var(--accent-color);
+  font-weight: 700;
+}
+
+/* Main Content */
+main {
+  margin: 1.5rem 0;
+}
+
+.view-toggles {
+  text-align: center;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.view-toggles button {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.view-toggles button.active, .view-toggles button:hover {
+  background-color: var(--secondary-color);
+  color: #FFF;
+  border-color: var(--secondary-color);
+}
+
+/* Grid/List View Base Setup (Mobile first behaves like a single column list/grid) */
+#members-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.member-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 1rem 0;
+}
+
+.member-card img {
+  height: 100px;
+  object-fit: contain;
+  margin: 1rem auto;
+}
+
+.member-card h3 {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  margin: 0;
+  padding: 0.5rem;
+  border-radius: 4px 4px 0 0;
+  order: -1;
+}
+
+[data-theme="dark"] .member-card h3 {
+  background-color: var(--nav-bg);
+  color: var(--text-color);
+}
+
+.member-card p {
+  padding: 0 1rem 0.5rem 1rem;
+  margin: 0;
+}
+
+/* Hidden image natively for list-view explicitly requested on mobile? Actually we'll let mobile just stack it, but hide img strictly if list-view */
+.list-view .member-card img {
+  display: none;
+}
+
+/* Footer */
+footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-top: 5px solid var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+  align-items: center;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-social a {
+  margin: 0 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+.footer-social a:hover {
+  transform: scale(1.1);
+}
+
+.footer-social img {
+  width: 32px;
+  height: 32px;
+}
+
+[data-theme="dark"] .footer-social img {
+  filter: invert(1);
+}

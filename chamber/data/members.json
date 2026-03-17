@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Guatemala Tech Solutions",
+    "address": "15 Avenida 12-34, Zona 10, Guatemala City",
+    "phone": "502-2333-4455",
+    "website": "http://example.com/guate-tech",
+    "image": "images/guate-tech.webp",
+    "membershipLevel": 3,
+    "description": "Leading technology solutions for local businesses."
+  },
+  {
+    "name": "Antigua Coffee Roasters",
+    "address": "4 Calle Oriente, Antigua Guatemala",
+    "phone": "502-7832-1122",
+    "website": "http://example.com/antigua-coffee",
+    "image": "images/antigua-coffee.webp",
+    "membershipLevel": 2,
+    "description": "Premium coffee exporting and roasting."
+  },
+  {
+    "name": "Maya Market Connect",
+    "address": "Mercado Central, Zona 1, Guatemala City",
+    "phone": "502-2253-6677",
+    "website": "http://example.com/maya-market",
+    "image": "images/maya-market.webp",
+    "membershipLevel": 1,
+    "description": "Connecting local artisans to the global market."
+  },
+  {
+    "name": "Quetzal Logistics",
+    "address": "Km 14.5 Carretera a El Salvador",
+    "phone": "502-2422-8899",
+    "website": "http://example.com/quetzal-logistics",
+    "image": "images/quetzal-logistics.webp",
+    "membershipLevel": 3,
+    "description": "Reliable transport and logistics across Central America."
+  },
+  {
+    "name": "Centro Financial Traders",
+    "address": "7a Avenida 5-10, Zona 4, Guatemala City",
+    "phone": "502-2384-9900",
+    "website": "http://example.com/centro-finance",
+    "image": "images/centro-finance.webp",
+    "membershipLevel": 2,
+    "description": "Accounting and financial consulting."
+  },
+  {
+    "name": "Verde Earth Agriculture",
+    "address": "Finca San Jose, Escuintla",
+    "phone": "502-7945-3344",
+    "website": "http://example.com/verde-agri",
+    "image": "images/verde-agri.webp",
+    "membershipLevel": 1,
+    "description": "Sustainable farming and crop distribution."
+  },
+  {
+    "name": "Historic Tikal Tours",
+    "address": "Parque Nacional Tikal, Petén",
+    "phone": "502-7926-1155",
+    "website": "http://example.com/tikal-tours",
+    "image": "images/tikal-tours.webp",
+    "membershipLevel": 3,
+    "description": "Guided tours of UNESCO World Heritage Mayan sites."
+  }
+]

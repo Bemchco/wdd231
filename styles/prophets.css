@@ -1,0 +1,86 @@
+:root {
+    --primary-color: #1B1D20;
+    --secondary-color: #0950C3;
+    --accent-color: #5A5F66;
+    --bg-color: #FFFFFF;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    color: var(--bg-color);
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+/* CSS Auto Columns - No Media Queries Using CSS Grid and auto-fit */
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+/* Card Styling */
+#cards section {
+    background-color: var(--bg-color);
+    border: 1px solid var(--accent-color);
+    padding: 0;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#cards section h2 {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    margin: 0 0 10px 0;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#cards section p {
+    margin: 5px 0;
+    font-size: 0.95em;
+    color: var(--primary-color);
+}
+
+#cards section img {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    margin-top: 20px;
+    border-top: 5px solid var(--secondary-color);
+}

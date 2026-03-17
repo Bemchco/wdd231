@@ -1,0 +1,13 @@
+{
+    "family_name": "Chinchilla",
+    "date_family_moved_in": "2026-03-15",
+    "number_of_members": 1,
+    "visited_by_bishopric": true,
+    "members": [
+        {
+            "name": "Brandon Chinchilla",
+            "gender": "Male",
+            "birthdate": "1998-02-11"
+        }
+    ]
+}
