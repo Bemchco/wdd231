@@ -271,3 +271,119 @@ footer {
 [data-theme="dark"] .level-gold {
   color: #ffd700;
 }
+
+/* ---------------- Home Page Styles ---------------- */
+.home-main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+}
+.hero img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+}
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(27, 29, 32, 0.85);
+    color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 85%;
+}
+.hero-content h2 { 
+    margin-top: 0; 
+    font-size: 1.8rem;
+}
+.cta-button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+.cta-button:hover {
+    background-color: #053b92;
+    color: #fff;
+}
+
+.events, .weather, .spotlights {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+}
+.events h3, .weather h3, .spotlights h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+[data-theme="dark"] .events h3, 
+[data-theme="dark"] .weather h3, 
+[data-theme="dark"] .spotlights h3 {
+    color: var(--text-color);
+}
+
+.events ul {
+    list-style: none;
+    padding: 0;
+}
+.events ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed var(--accent-color);
+}
+.events ul li:last-child {
+    border-bottom: none;
+}
+
+.spotlight-card {
+    border-top: 1px solid var(--accent-color);
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+.spotlight-card h4 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+}
+.spotlight-card img {
+    max-height: 80px;
+    margin-bottom: 0.5rem;
+    object-fit: contain;
+}
+.spotlight-card p {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+}
+.membership-badge {
+    display: inline-block;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 0.8rem !important;
+}
+.level-gold-tag {
+    background-color: #ffd700;
+    color: #000;
+    border: 1px solid #d4af37;
+}
+.level-silver-tag {
+    background-color: #c0c0c0;
+    color: #000;
+    border: 1px solid #a0a0a0;
+}
