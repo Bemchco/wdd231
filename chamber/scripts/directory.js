@@ -58,6 +58,7 @@ if (membersContainer) {
                 <p>${member.address}</p>
                 <p>${member.phone}</p>
                 <p><a href="${member.website}" target="_blank">${member.website.replace('http://', '').replace('https://', '').replace(/\/$/, '')}</a></p>
+                <p>Membership Level: ${member.membershipLevel === 1 ? 'Member' : member.membershipLevel === 2 ? 'Silver' : 'Gold'}</p>
             `;
             membersContainer.appendChild(card);
         });
