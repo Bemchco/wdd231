@@ -52,13 +52,19 @@ if (membersContainer) {
             const card = document.createElement('div');
             card.classList.add('member-card');
 
+            let levelName = '';
+            let levelClass = '';
+            if (member.membershipLevel === 1) { levelName = 'Member'; levelClass = 'level-bronze'; }
+            else if (member.membershipLevel === 2) { levelName = 'Silver'; levelClass = 'level-silver'; }
+            else if (member.membershipLevel === 3) { levelName = 'Gold'; levelClass = 'level-gold'; }
+
             card.innerHTML = `
                 <img src="${member.image}" alt="${member.name} Logo" loading="lazy" width="100" height="100">
                 <h3>${member.name}</h3>
                 <p>${member.address}</p>
                 <p>${member.phone}</p>
                 <p><a href="${member.website}" target="_blank">${member.website.replace('http://', '').replace('https://', '').replace(/\/$/, '')}</a></p>
-                <p>Membership Level: ${member.membershipLevel === 1 ? 'Member' : member.membershipLevel === 2 ? 'Silver' : 'Gold'}</p>
+                <p>Membership Level: <span class="${levelClass}">${levelName}</span></p>
             `;
             membersContainer.appendChild(card);
         });
