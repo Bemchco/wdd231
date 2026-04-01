@@ -31,6 +31,8 @@ body {
   line-height: 1.6;
   font-family: 'Roboto', sans-serif;
   padding: 0 2%;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 img {
@@ -386,4 +388,307 @@ footer {
     background-color: #c0c0c0;
     color: #000;
     border: 1px solid #a0a0a0;
+}
+
+/* ---------------- Join Page Styles ---------------- */
+.join-main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Form Styles */
+.form-section {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--accent-color);
+}
+
+.form-section h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+
+[data-theme="dark"] .form-section h2 {
+    color: var(--text-color);
+}
+
+form fieldset {
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+}
+
+form legend {
+    font-weight: bold;
+    color: var(--secondary-color);
+    padding: 0 0.5rem;
+}
+
+[data-theme="dark"] form legend {
+    color: var(--secondary-color); /* Kept secondary for visibility */
+}
+
+form label {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.3rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+
+/* Favorable eye tracking / focus padding */
+form input:focus,
+form textarea:focus {
+    outline: 2px solid var(--secondary-color);
+    background-color: #f0f8ff;
+}
+
+[data-theme="dark"] form input:focus,
+[data-theme="dark"] form textarea:focus {
+    background-color: #333;
+    color: #FFF;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+.submit-button {
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #053b92;
+}
+
+/* Membership Cards Styling with Animation */
+.membership-cards-section h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+
+[data-theme="dark"] .membership-cards-section h2 {
+    color: var(--text-color);
+}
+
+.membership-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+@keyframes slideFadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.membership-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+
+    /* Initial Animation config */
+    opacity: 0; 
+    animation: slideFadeUp 0.6s ease-out forwards;
+}
+
+/* Animation Delays */
+.np-card { animation-delay: 0.1s; }
+.bronze-card { animation-delay: 0.3s; }
+.silver-card { animation-delay: 0.5s; }
+.gold-card { animation-delay: 0.7s; }
+
+.membership-card h3 {
+    margin-top: 0;
+    color: var(--secondary-color);
+}
+
+.modal-link {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.modal-link:hover {
+    background-color: var(--accent-color);
+}
+
+[data-theme="dark"] .modal-link {
+    background-color: var(--nav-bg);
+    color: var(--text-color);
+    border: 1px solid var(--accent-color);
+}
+[data-theme="dark"] .modal-link:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+}
+
+/* Modal Dialog Styling */
+.membership-modal {
+    border: none;
+    border-radius: 8px;
+    padding: 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    max-width: 90%;
+    width: 400px;
+}
+
+.membership-modal::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 2rem;
+    position: relative;
+    border: 2px solid var(--secondary-color);
+    border-radius: 8px;
+}
+
+[data-theme="dark"] .modal-content {
+    background-color: var(--card-bg);
+    border-color: var(--accent-color);
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.modal-content h3 {
+    margin-top: 0;
+    color: var(--secondary-color);
+}
+
+.modal-content ul {
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.modal-content li {
+    margin-bottom: 0.5rem;
+}
+
+/* ---------------- Thank You Page Styles ---------------- */
+.thankyou-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.thankyou-hero {
+    text-align: center;
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+    width: 100%;
+}
+
+.thankyou-hero h2 {
+    color: var(--secondary-color);
+}
+
+.thankyou-details {
+    width: 100%;
+    max-width: 600px;
+    background-color: var(--bg-color);
+    padding: 2rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.thankyou-details h3 {
+    margin-top: 0;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+
+.details-card p {
+    margin: 0.8rem 0;
+    border-bottom: 1px dashed var(--accent-color);
+    padding-bottom: 0.5rem;
+}
+
+.details-card p:last-child {
+    border-bottom: none;
+}
+
+.details-card span {
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+[data-theme="dark"] .details-card span {
+    color: #6495ED; /* Lighter secondary for dark mode */
+}
+
+.thankyou-details .cta-button {
+    display: block;
+    text-align: center;
+    margin: 2rem auto 0;
+    width: max-content;
 }

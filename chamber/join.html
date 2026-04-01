@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.ico">
+    <title>Guatemala City Chamber of Commerce - Join</title>
+    <meta name="description"
+        content="Join the Guatemala City Chamber of Commerce to grow your business and connect with others.">
+    <meta name="author" content="Brandon">
+
+    <meta property="og:title" content="Join Guatemala City Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://bemchco.github.io/wdd231/chamber/og-image.png">
+    <meta property="og:url" content="https://bemchco.github.io/wdd231/chamber/join.html">
+    <meta property="og:description"
+        content="Grow your organization and join our extensive network of businesses in Guatemala City.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- CSS and JS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/chamber.css">
+    <link rel="stylesheet" href="styles/chamber-larger.css">
+    <script src="scripts/home.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/favicon.ico" alt="Guatemala City Chamber Logo" width="50" height="50">
+            <h1>Guatemala City Chamber of Commerce</h1>
+        </div>
+        <div class="header-actions">
+            <button id="dark-mode-toggle" title="Toggle Dark Mode">🌒</button>
+            <button id="hamburger-menu" title="Navigation Menu">☰</button>
+        </div>
+    </header>
+
+    <nav>
+        <ul id="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html" class="active">Join</a></li>
+        </ul>
+    </nav>
+
+    <main class="join-main">
+        <section class="form-section">
+            <h2>Join the Chamber</h2>
+            <form id="join-form" method="get" action="thankyou.html">
+                <fieldset>
+                    <legend>Applicant Information</legend>
+
+                    <label for="first-name">First Name
+                        <input type="text" id="first-name" name="first-name" title="First Name" autocomplete="given-name" required>
+                    </label>
+
+                    <label for="last-name">Last Name
+                        <input type="text" id="last-name" name="last-name" title="Last Name" autocomplete="family-name" required>
+                    </label>
+
+                    <label for="org-title">Organizational Title
+                        <input type="text" id="org-title" name="org-title" title="Organizational Title" autocomplete="organization-title" pattern="[A-Za-z\-\ ]{7,}">
+                    </label>
+
+                    <label for="email">Email Address
+                        <input type="email" id="email" name="email" title="Email Address" autocomplete="email" placeholder="john.doe@example.com" required>
+                    </label>
+
+                    <label for="phone">Mobile Phone
+                        <input type="tel" id="phone" name="phone" title="Mobile Phone Number" autocomplete="tel" required>
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Business Information</legend>
+
+                    <label for="biz-name">Business/Organization Name
+                        <input type="text" id="biz-name" name="biz-name" title="Business or Organization Name" autocomplete="organization" required>
+                    </label>
+
+                    <label>Membership Level</label>
+                    <div class="radio-group">
+                        <label for="level-np" class="radio-label">
+                            <input type="radio" id="level-np" name="membership-level" value="np" required>
+                            NP Membership (No Fee)
+                        </label>
+                        <label for="level-bronze" class="radio-label">
+                            <input type="radio" id="level-bronze" name="membership-level" value="bronze">
+                            Bronze Membership
+                        </label>
+                        <label for="level-silver" class="radio-label">
+                            <input type="radio" id="level-silver" name="membership-level" value="silver">
+                            Silver Membership
+                        </label>
+                        <label for="level-gold" class="radio-label">
+                            <input type="radio" id="level-gold" name="membership-level" value="gold">
+                            Gold Membership
+                        </label>
+                    </div>
+
+                    <label for="biz-description">Business/Organization Description
+                        <textarea id="biz-description" name="biz-description" title="Business Description" rows="4"></textarea>
+                    </label>
+                </fieldset>
+
+                <!-- Hidden Input for Timestamp -->
+                <input type="hidden" id="timestamp" name="timestamp">
+
+                <input type="submit" value="Submit Application" class="submit-button">
+            </form>
+        </section>
+
+        <section class="membership-cards-section">
+            <h2>Membership Levels</h2>
+            <div class="membership-cards">
+                <div class="membership-card np-card">
+                    <h3>Non Profit</h3>
+                    <p>Ideal for NGOs and non-profit organizations seeking baseline community involvement.</p>
+                    <button class="modal-link" data-modal="modal-np">More Info</button>
+                    <dialog id="modal-np" class="membership-modal">
+                        <div class="modal-content">
+                            <button class="close-modal" aria-label="Close Modal">❌</button>
+                            <h3>Non Profit Membership Benefits</h3>
+                            <p><strong>Cost:</strong> Free</p>
+                            <ul>
+                                <li>Basic directory listing</li>
+                                <li>Access to community networking events</li>
+                                <li>Weekly newsletter updates</li>
+                            </ul>
+                        </div>
+                    </dialog>
+                </div>
+
+                <div class="membership-card bronze-card">
+                    <h3>Bronze Level</h3>
+                    <p>Designed for small business owners wanting essential resources and visibility.</p>
+                    <button class="modal-link" data-modal="modal-bronze">More Info</button>
+                    <dialog id="modal-bronze" class="membership-modal">
+                        <div class="modal-content">
+                            <button class="close-modal" aria-label="Close Modal">❌</button>
+                            <h3>Bronze Membership Benefits</h3>
+                            <p><strong>Cost:</strong> $200 / year</p>
+                            <ul>
+                                <li>Enhanced directory listing</li>
+                                <li>15% discount on paid events</li>
+                                <li>Access to basic training materials</li>
+                            </ul>
+                        </div>
+                    </dialog>
+                </div>
+
+                <div class="membership-card silver-card">
+                    <h3>Silver Level</h3>
+                    <p>Perfect for growing businesses that want specialized training and moderate advertising.</p>
+                    <button class="modal-link" data-modal="modal-silver">More Info</button>
+                    <dialog id="modal-silver" class="membership-modal">
+                        <div class="modal-content">
+                            <button class="close-modal" aria-label="Close Modal">❌</button>
+                            <h3>Silver Membership Benefits</h3>
+                            <p><strong>Cost:</strong> $500 / year</p>
+                            <ul>
+                                <li>Priority directory placement</li>
+                                <li>30% discount on paid events</li>
+                                <li>Featured business spotlight chances on the homepage</li>
+                                <li>Access to advanced business training series</li>
+                            </ul>
+                        </div>
+                    </dialog>
+                </div>
+
+                <div class="membership-card gold-card">
+                    <h3>Gold Level</h3>
+                    <p>The ultimate prestige membership offering the greatest exposure and executive perks.</p>
+                    <button class="modal-link" data-modal="modal-gold">More Info</button>
+                    <dialog id="modal-gold" class="membership-modal">
+                        <div class="modal-content">
+                            <button class="close-modal" aria-label="Close Modal">❌</button>
+                            <h3>Gold Membership Benefits</h3>
+                            <p><strong>Cost:</strong> $1000 / year</p>
+                            <ul>
+                                <li>Top-tier directory placement</li>
+                                <li>Free admission to all regular events</li>
+                                <li>Guaranteed spotlight placement on the homepage</li>
+                                <li>Included banner ad in monthly newsletter</li>
+                                <li>VIP executive dinner invites</li>
+                            </ul>
+                        </div>
+                    </dialog>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-info">
+            <p><strong>Guatemala City Chamber of Commerce</strong></p>
+            <p>10 Avenida Reforma</p>
+            <p>Guatemala City, Guatemala</p>
+            <p>info@guatemalacitycc.org</p>
+            <p>(502) 2222-3333</p>
+        </div>
+        <div class="footer-social">
+            <a href="https://youtube.com" target="_blank" title="YouTube"><img src="images/youtube.svg" alt="YouTube"
+                    width="30" height="30"></a>
+            <a href="https://twitter.com" target="_blank" title="X (Twitter)"><img src="images/x-twitter.svg"
+                    alt="X (Twitter)" width="30" height="30"></a>
+            <a href="https://linkedin.com" target="_blank" title="LinkedIn"><img src="images/linkedin.svg"
+                    alt="LinkedIn" width="30" height="30"></a>
+        </div>
+        <div class="footer-dev">
+            <p>WDD231 Chamber of Commerce</p>
+            <p>Brandon Chinchilla</p>
+            <p>&copy; <span id="currentyear"></span> Guatemala City Chamber of Commerce</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+
+</html>
