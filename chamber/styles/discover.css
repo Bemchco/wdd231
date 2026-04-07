@@ -14,7 +14,6 @@
   padding: 1.5rem;
   border: 1px solid var(--accent-color);
   border-radius: 4px;
-  grid-column: 1 / -1;
 }
 
 .visitor-heading {
