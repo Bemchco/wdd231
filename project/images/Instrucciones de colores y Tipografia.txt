@@ -1,0 +1,20 @@
+Colores Principales:
+Azul Marino (Texto "REMIS" y parte de las flechas): #003385 (Un azul oscuro y profundo)
+
+Naranja Vibrante (Cuerpo principal de los engranajes): #FF6600 (Un naranja saturado)
+
+Amarillo / Dorado (Centros y brillos de los engranajes): #FFCC00 (Un tono amarillo cálido)
+
+Rojo Vino / Granate (Puntas de las flechas): #A50021 (Un rojo oscuro que se fusiona con el azul en el degradado)
+
+Nota sobre el diseño: El logo utiliza degradados (gradients).
+
+Flechas: Transición de Azul Marino (#003385) a Rojo Vino (#A50021).
+
+Engranajes: Transición de Amarillo (#FFCC00) en el centro a Naranja (#FF6600) o incluso rojizo en los bordes.
+
+Nombre de la fuente: Eurostile Bold Extended (o su predecesora, Microgramma).
+
+Estilo: Sans-serif (palo seco), geométrica y ancha (extended).
+
+Elige una fuente secundaria (como Open Sans, Roboto o Montserrat) que sea fácil de leer para tus documentos, cotizaciones y sitio web.

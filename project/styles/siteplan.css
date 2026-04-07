@@ -1,0 +1,217 @@
+/* Color Palette Variables based on Site Plan */
+:root {
+    --primary-color: #003385;      /* Navy Blue */
+    --secondary-color: #FF6600;    /* Vibrant Orange */
+    --accent-color: #FFCC00;       /* Yellow/Gold */
+    --dark-accent-color: #A50021;  /* Wine Red / Maroon */
+
+    --text-color: #333333;
+    --background-color: #f9f9f9;
+    --card-background: #ffffff;
+    
+    /* Typography */
+    /* Using a fallback sans-serif if Eurostile/Microgramma are not installed locally */
+    --heading-font: "Eurostile", "Microgramma", Arial, sans-serif; 
+    --body-font: "Montserrat", sans-serif;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-family: var(--heading-font);
+    margin: 0;
+    font-size: 2.8rem;
+    letter-spacing: 1px;
+}
+
+main {
+    max-width: 900px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+    background-color: var(--card-background);
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+section {
+    padding: 2rem;
+    border-bottom: 2px solid #eeeeee;
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    border-left: 5px solid var(--secondary-color);
+    padding-left: 10px;
+}
+
+h3 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    font-size: 1.4rem;
+}
+
+p, li {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+ul {
+    padding-left: 1.8rem;
+}
+
+strong {
+    color: var(--primary-color);
+}
+
+a {
+    color: var(--dark-accent-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+/* Color Palette Display Grid */
+.color-palette {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.color-swatch {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.color-swatch:hover {
+    transform: translateY(-5px);
+}
+
+.color-swatch.primary { background-color: var(--primary-color); }
+.color-swatch.secondary { background-color: var(--secondary-color); }
+.color-swatch.accent { background-color: var(--accent-color); color: var(--text-color); }
+.color-swatch.dark-accent { background-color: var(--dark-accent-color); }
+
+.color-hex {
+    font-family: monospace;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 1.5rem 1rem;
+    display: block;
+    background: rgba(0,0,0,0.1);
+}
+
+.color-desc {
+    padding: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    background: rgba(255,255,255,0.1);
+    flex-grow: 1;
+}
+
+/* Typography Display */
+.typography-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.font-preview {
+    background-color: #f5f5f5;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-top: 4px solid var(--accent-color);
+}
+
+.font-preview h3 {
+    margin-top: 0;
+}
+
+.primary-font .font-example {
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+    line-height: 1.5;
+    word-break: break-all;
+}
+
+.secondary-font .font-example {
+    font-family: var(--body-font);
+    font-size: 1.2rem;
+    line-height: 1.5;
+    word-break: break-all;
+}
+
+/* Wireframe Image */
+.wireframe-img {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid var(--primary-color);
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    display: block;
+    margin: 1.5rem auto 0;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    border-top: 5px solid var(--secondary-color);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .typography-section {
+        grid-template-columns: 1fr;
+    }
+    
+    header h1 {
+        font-size: 2.2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+}

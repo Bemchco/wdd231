@@ -1,0 +1,164 @@
+/* --- Discover Page Layout (Small Screens < 641px) --- */
+.discover-main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "sidebar"
+    "cards";
+  gap: 1.5rem;
+}
+
+.discover-main .sidebar {
+  grid-area: sidebar;
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+  grid-column: 1 / -1;
+}
+
+.visitor-heading {
+  color: var(--secondary-color);
+  margin-top: 0;
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 0.5rem;
+}
+
+.cards-container {
+  grid-area: cards;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "c1"
+    "c2"
+    "c3"
+    "c4"
+    "c5"
+    "c6"
+    "c7"
+    "c8";
+  gap: 1.5rem;
+}
+
+.discover-card {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure JS injects class 'card1'...'card8' etc to map grid areas. In JS we injected card.style.gridArea = 'c1' etc. */
+
+.discover-card h2 {
+  font-size: 1.4rem;
+  color: var(--secondary-color);
+  margin-top: 0;
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 0.5rem;
+}
+
+.discover-card figure {
+  margin: 0 0 1rem 0;
+  padding: 0;
+  overflow: hidden; /* For hover zoom effect */
+  border-radius: 4px;
+  max-height: 250px;
+}
+
+.discover-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.discover-card address {
+  font-style: italic;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+  color: var(--text-color);
+}
+
+.discover-card p {
+  flex-grow: 1; /* Pushes button to bottom */
+  margin-bottom: 1.5rem;
+}
+
+/* Medium Screens (641px to 1024px) */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .cards-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "c1 c2"
+      "c3 c4"
+      "c5 c6"
+      "c7 c8";
+  }
+
+  /* CSS Hover effects - not applied to mobile */
+  .discover-card img {
+    transition: transform 0.4s ease, filter 0.4s ease;
+  }
+  
+  .discover-card:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.1) contrast(1.1);
+  }
+}
+
+/* Large Screens (1025px and above) */
+@media (min-width: 1025px) {
+  .discover-main {
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+      "sidebar cards";
+    align-items: start;
+    gap: 2rem;
+  }
+
+  .discover-main .sidebar {
+    position: sticky;
+    top: 2rem;
+  }
+
+  .cards-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "c1 c1 c2"
+      "c3 c4 c4"
+      "c5 c6 c7"
+      "c8 c8 c8";
+  }
+
+  /* Specific styling based on grid spread */
+  .discover-card.card1, .discover-card.card4, .discover-card.card8 {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .discover-card.card1 figure, .discover-card.card4 figure, .discover-card.card8 figure {
+    flex: 0 0 350px;
+    height: 100%;
+    margin-bottom: 0;
+  }
+
+  .discover-card.card1 div, .discover-card.card4 div, .discover-card.card8 div {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      height: 100%;
+  }
+
+  /* CSS Hover effects - not applied to mobile */
+  .discover-card img {
+    transition: transform 0.4s ease, filter 0.4s ease;
+  }
+  
+  .discover-card:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.1) contrast(1.1);
+  }
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+    <title>Guatemala City Chamber of Commerce - Discover</title>
+    <meta name="description"
+        content="Discover the beauty and landmarks of Guatemala City. Learn about iconic places and attractions in our area through the Chamber of Commerce.">
+    <meta name="author" content="Brandon">
+
+    <!-- Facebook Social Media Meta Tags -->
+    <meta property="og:title" content="Guatemala City Chamber of Commerce Discover">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://bemchco.github.io/wdd231/chamber/og-image.png">
+    <meta property="og:url" content="https://bemchco.github.io/wdd231/chamber/discover.html">
+    <meta property="og:description"
+        content="Discover fascinating places, landmarks, and cultural spots in Guatemala City through the Chamber website.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- CSS and JS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/chamber.css">
+    <link rel="stylesheet" href="styles/chamber-larger.css">
+    <link rel="stylesheet" href="styles/discover.css">
+    
+    <!-- Make sure to use type="module" for the discover.js since it imports places.mjs -->
+    <script src="scripts/discover.js" type="module"></script>
+    <script src="scripts/home.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/favicon.ico" alt="Guatemala City Chamber Logo" width="50" height="50">
+            <h1>Guatemala City Chamber of Commerce</h1>
+        </div>
+        <div class="header-actions">
+            <!-- Toggle elements controlled by JS -->
+            <button id="dark-mode-toggle" title="Toggle Dark Mode">🌒</button>
+            <button id="hamburger-menu" title="Navigation Menu">☰</button>
+        </div>
+    </header>
+
+    <nav>
+        <ul id="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html" class="active">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+    </nav>
+
+    <main class="discover-main">
+        <div class="sidebar">
+            <h2 class="visitor-heading">Visitor Tracking</h2>
+            <p id="visitor-message" class="visitor-message">Loading visitor info...</p>
+        </div>
+        <div class="cards-container">
+            <!-- Dynamic 8 Discover Cards injected via JS -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-info">
+            <p><strong>Guatemala City Chamber of Commerce</strong></p>
+            <p>10 Avenida Reforma</p>
+            <p>Guatemala City, Guatemala</p>
+            <p>info@guatemalacitycc.org</p>
+            <p>(502) 2222-3333</p>
+        </div>
+        <div class="footer-social">
+            <a href="https://youtube.com" target="_blank" title="YouTube"><img src="images/youtube.svg" alt="YouTube"
+                    width="30" height="30"></a>
+            <a href="https://twitter.com" target="_blank" title="X (Twitter)"><img src="images/x-twitter.svg"
+                    alt="X (Twitter)" width="30" height="30"></a>
+            <a href="https://linkedin.com" target="_blank" title="LinkedIn"><img src="images/linkedin.svg"
+                    alt="LinkedIn" width="30" height="30"></a>
+        </div>
+        <div class="footer-dev">
+            <p>WDD231 Chamber of Commerce</p>
+            <p>Brandon Chinchilla</p>
+            <p>&copy; <span id="currentyear"></span> Guatemala City Chamber of Commerce</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+
+</html>
