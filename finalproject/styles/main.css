@@ -1,8 +1,12 @@
 :root {
-  --primary-color: #003385; /* Navy Blue */
-  --secondary-color: #FF6600; /* Vibrant Orange */
-  --accent-color: #FFCC00; /* Yellow / Gold */
-  --dark-accent: #A50021; /* Wine Red / Maroon */
+  --primary-color: #003385;
+  /* Navy Blue */
+  --secondary-color: #FF8500;
+  /* Vibrant Orange */
+  --accent-color: #FFCC00;
+  /* Yellow / Gold */
+  --dark-accent: #A50021;
+  /* Wine Red / Maroon */
   --light-bg: #f4f4f9;
   --dark-text: #333333;
   --white: #ffffff;
@@ -25,7 +29,12 @@ body {
   min-height: 100vh;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-primary);
   color: var(--primary-color);
   margin-top: 0;
@@ -86,7 +95,18 @@ header .logo-img {
   max-height: 500px;
 }
 
+a {
+  color: var(--dark-accent);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
 #navMenu a {
+  background-color: var(--primary-color);
+  color: var(--white);
   display: block;
   padding: 1rem;
   text-align: center;
@@ -99,7 +119,7 @@ header .logo-img {
 
 #navMenu a:hover {
   background-color: var(--secondary-color);
-  color: var(--white);
+  color: #000000;
 }
 
 #navMenu a.active {
@@ -145,14 +165,14 @@ main {
   color: var(--white);
   font-size: 2rem;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
   background-color: var(--secondary-color);
-  color: var(--white);
+  color: #000000;
   text-decoration: none;
   font-family: var(--font-primary);
   font-weight: bold;
@@ -165,15 +185,17 @@ main {
 
 .btn:hover {
   background-color: var(--dark-accent);
+  color: var(--white);
   transform: scale(1.05);
 }
 
 /* Sections */
-.vision-section, .about-section {
+.vision-section,
+.about-section {
   background: var(--white);
   padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
 }
 
@@ -190,6 +212,7 @@ main {
   justify-content: center;
   margin-bottom: 1.5rem;
 }
+
 .filter-btn {
   background-color: var(--primary-color);
   color: var(--white);
@@ -200,35 +223,42 @@ main {
   cursor: pointer;
   transition: background-color 0.2s;
 }
-.filter-btn:hover, .filter-btn.active {
+
+.filter-btn:hover,
+.filter-btn.active {
   background-color: var(--secondary-color);
+  color: #000000;
 }
 
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
+  min-height: 60vh;
 }
 
 .project-card {
   background: var(--white);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
   cursor: pointer;
   display: flex;
   flex-direction: column;
 }
+
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
+
 .project-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
+
 .project-info {
   padding: 1rem;
   flex: 1;
@@ -236,14 +266,17 @@ main {
   flex-direction: column;
   justify-content: space-between;
 }
+
 .project-info h3 {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
 }
+
 .project-info p {
   margin: 0.25rem 0;
   font-size: 0.9rem;
 }
+
 .badge {
   display: inline-block;
   background-color: var(--accent-color);
@@ -261,32 +294,49 @@ dialog {
   border: none;
   border-radius: 8px;
   padding: 0;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
   max-width: 500px;
   width: 90%;
 }
+
 dialog::backdrop {
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
 }
+
 .dialog-content {
   padding: 1.5rem;
   position: relative;
 }
+
 .dialog-content h2 {
   margin-bottom: 0.5rem;
 }
+
 .close-btn {
   position: absolute;
-  top: 10px;
+  top: 15px;
   right: 15px;
-  background: none;
-  border: none;
+  background-color: var(--white);
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1.5rem;
+  font-weight: bold;
   cursor: pointer;
-  color: var(--dark-text);
+  color: var(--primary-color);
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s, color 0.2s;
 }
+
 .close-btn:hover {
-  color: var(--dark-accent);
+  background-color: var(--dark-accent);
+  border-color: var(--dark-accent);
+  color: var(--white);
 }
 
 /* Form Styles */
@@ -294,19 +344,22 @@ dialog::backdrop {
   background: var(--white);
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   max-width: 600px;
   margin: 0 auto;
 }
+
 .form-group {
   margin-bottom: 1.5rem;
 }
+
 label {
   display: block;
   font-weight: bold;
   margin-bottom: 0.5rem;
   color: var(--primary-color);
 }
+
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -314,25 +367,31 @@ select,
 textarea {
   width: 100%;
   padding: 0.75rem;
-  border: 1px solid #ccc;
+  border: 1px solid #767676;
   border-radius: 4px;
   font-family: inherit;
   font-size: 1rem;
 }
-input:focus, select:focus, textarea:focus {
+
+input:focus,
+select:focus,
+textarea:focus {
   outline: 2px solid var(--secondary-color);
   border-color: transparent;
 }
+
 fieldset {
-  border: 1px solid #ccc;
+  border: 1px solid #767676;
   border-radius: 4px;
   margin-bottom: 1.5rem;
 }
+
 legend {
   font-weight: bold;
   color: var(--primary-color);
   padding: 0 0.5rem;
 }
+
 .radio-group label {
   display: inline-block;
   font-weight: normal;
@@ -347,7 +406,15 @@ legend {
   padding: 1rem;
   background-color: var(--white);
   border-left: 4px solid var(--accent-color);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#visit-stats p {
+  margin: 0;
 }
 
 /* Footer */
@@ -358,12 +425,13 @@ footer {
   padding: 1.5rem 1rem;
   margin-top: auto;
 }
+
 footer a {
+  background-color: var(--primary-color);
   color: var(--accent-color);
   text-decoration: none;
 }
+
 footer a:hover {
   text-decoration: underline;
 }
-
-

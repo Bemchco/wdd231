@@ -16,6 +16,7 @@
   }
   #navMenu a {
     border: none;
+    background-color: transparent;
     color: var(--primary-color);
     padding: 0.5rem 1rem;
     margin-left: 0.5rem;
@@ -23,7 +24,7 @@
   }
   #navMenu a:hover {
     background-color: var(--secondary-color);
-    color: var(--white);
+    color: #000000;
   }
   #navMenu a.active {
     background-color: var(--primary-color);

@@ -26,23 +26,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function displayProjects(projects) {
             projectsContainer.innerHTML = '';
-            
+
             // Array Method: map
             const projectHTML = projects.map(project => {
                 // Template Literals
                 return `
                     <div class="project-card" data-id="${project.id}">
-                        <img src="${project.image}" alt="${project.name}" loading="lazy">
+                        <img src="${project.image}" alt="${project.type} project: ${project.name}" width="475" height="317" loading="lazy">
                         <div class="project-info">
                             <span class="badge">${project.type}</span>
-                            <h3>${project.name}</h3>
+                            <h2>${project.name}</h2>
                             <p><strong>Client:</strong> ${project.client}</p>
                             <p><strong>Date:</strong> ${project.date}</p>
                         </div>
                     </div>
                 `;
             }).join('');
-            
+
             projectsContainer.innerHTML = projectHTML;
 
             // DOM Manipulation & Event Handling
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.addEventListener('click', (e) => {
                 filters.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
-                
+
                 const type = btn.getAttribute('data-filter');
                 if (type === 'All') {
                     displayProjects(allProjects);
