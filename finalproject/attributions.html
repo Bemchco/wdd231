@@ -8,22 +8,43 @@
     <meta name="description" content="Attributions for resources used in the REMIS project.">
     <meta name="author" content="Brandon">
 
+    <meta property="og:title" content="Resource Attributions for REMIS">
+    <meta property="og:description" content="View the full list of resource attributions and guidelines for the REMIS industrial solutions website.">
+    <meta property="og:image" content="https://bemchco.github.io/wdd231/finalproject/images/logo-remis-v1.webp">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bemchco.github.io/wdd231/finalproject/attributions.html">
+
     <link rel="icon" href="images/logo-remis-v6-isotipo.webp" type="image/webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main-larger.css">
     
-    <script type="module" src="scripts/main.mjs"></script>
+    <script type="module">
+        import { setupNavigation } from './scripts/main.mjs';
+        document.addEventListener('DOMContentLoaded', () => {
+            setupNavigation();
+        });
+    </script>
 </head>
 
 <body>
     <header>
-        <h1>Resource Attributions</h1>
+        <div class="logo-container">
+            <img src="images/logo-remis-v1.webp" alt="REMIS Logo" class="logo-img">
+        </div>
+        <button id="menuButton" aria-label="Toggle Navigation">☰</button>
+        <nav id="navMenu">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
     </header>
 
     <main>
+        <h1>Resource Attributions</h1>
         <p>The following resources were used in the development of this website:</p>
         <ul>
             <li><strong>Images:</strong> Provided by Unsplash (https://unsplash.com) via automated image delivery.</li>
