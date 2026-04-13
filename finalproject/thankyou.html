@@ -24,26 +24,10 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/main-larger.css">
 
-    <script type="module">
-        import { setupNavigation } from './scripts/main.mjs';
-        document.addEventListener('DOMContentLoaded', () => {
-            setupNavigation();
-
-            const params = new URLSearchParams(window.location.search);
-            const dataDisplay = document.getElementById('submitted-data');
-
-            if (params.has('firstname')) {
-                let html = '<ul>';
-                for (const [key, value] of params.entries()) {
-                    html += `<li><strong>${key}:</strong> ${value}</li>`;
-                }
-                html += '</ul>';
-                dataDisplay.innerHTML = html;
-            } else {
-                dataDisplay.innerHTML = '<p>No data submitted.</p>';
-            }
-        });
-    </script>
+    <!-- External Scripts -->
+    <script type="module" src="scripts/main.mjs"></script>
+    <script type="module" src="scripts/thankyou.mjs"></script>
+    <script src="scripts/dates.js" defer></script>
 </head>
 
 <body>
@@ -75,12 +59,10 @@
     </main>
 
     <footer>
-        <p>&copy; <span id="year">2026</span> REMIS. All rights reserved.</p>
+        <p>&copy; <span id="current-year">2026</span> REMIS. All rights reserved.</p>
+        <p>Last Modification: <span id="last-modified"></span></p>
         <p><a href="attributions.html">Resource Attributions</a></p>
     </footer>
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
 </body>
 
 </html>

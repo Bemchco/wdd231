@@ -24,7 +24,11 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/main-larger.css">
 
+    <!-- External Scripts -->
+    <script type="module" src="scripts/main.mjs"></script>
+    <script type="module" src="scripts/storage.mjs"></script>
     <script type="module" src="scripts/projects.mjs"></script>
+    <script src="scripts/dates.js" defer></script>
 </head>
 
 <body>
@@ -76,12 +80,10 @@
     </main>
 
     <footer>
-        <p>&copy; <span id="year">2026</span> REMIS. All rights reserved.</p>
+        <p>&copy; <span id="current-year">2026</span> REMIS. All rights reserved.</p>
+        <p>Last Modification: <span id="last-modified"></span></p>
         <p><a href="attributions.html">Resource Attributions</a></p>
     </footer>
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
 </body>
 
 </html>

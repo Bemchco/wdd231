@@ -24,23 +24,10 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/main-larger.css">
 
-    <script type="module">
-        import { setupNavigation } from './scripts/main.mjs';
-        document.addEventListener('DOMContentLoaded', () => {
-            setupNavigation();
-
-            // Local Storage form save to populate next pages or restore
-            const formInputs = document.querySelectorAll('.contact-form input[type="text"], .contact-form input[type="email"], .contact-form input[type="tel"]');
-            formInputs.forEach(input => {
-                const saved = localStorage.getItem(`form-${input.id}`);
-                if (saved) input.value = saved;
-
-                input.addEventListener('input', () => {
-                    localStorage.setItem(`form-${input.id}`, input.value);
-                });
-            });
-        });
-    </script>
+    <!-- External Scripts -->
+    <script type="module" src="scripts/main.mjs"></script>
+    <script type="module" src="scripts/contact.mjs"></script>
+    <script src="scripts/dates.js" defer></script>
 </head>
 
 <body>
@@ -114,12 +101,10 @@
     </main>
 
     <footer>
-        <p>&copy; <span id="year">2026</span> REMIS. All rights reserved.</p>
+        <p>&copy; <span id="current-year">2026</span> REMIS. All rights reserved.</p>
+        <p>Last Modification: <span id="last-modified"></span></p>
         <p><a href="attributions.html">Resource Attributions</a></p>
     </footer>
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
 </body>
 
 </html>

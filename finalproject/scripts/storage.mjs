@@ -16,3 +16,7 @@ export function addVisitCount() {
         statsContainer.innerHTML = `<p><strong>${message}</strong></p>`;
     }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    addVisitCount();
+});

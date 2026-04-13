@@ -22,12 +22,9 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/main-larger.css">
     
-    <script type="module">
-        import { setupNavigation } from './scripts/main.mjs';
-        document.addEventListener('DOMContentLoaded', () => {
-            setupNavigation();
-        });
-    </script>
+    <!-- External Scripts -->
+    <script type="module" src="scripts/main.mjs"></script>
+    <script src="scripts/dates.js" defer></script>
 </head>
 
 <body>
@@ -58,7 +55,8 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 REMIS. All rights reserved.</p>
+        <p>&copy; <span id="current-year">2026</span> REMIS. All rights reserved.</p>
+        <p>Last Modification: <span id="last-modified"></span></p>
     </footer>
 </body>
 

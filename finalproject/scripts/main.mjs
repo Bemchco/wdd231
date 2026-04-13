@@ -23,3 +23,7 @@ export function setupNavigation() {
         }
     });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    setupNavigation();
+});

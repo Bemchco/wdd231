@@ -1,10 +1,6 @@
-import { setupNavigation } from './main.mjs';
-import { addVisitCount } from './storage.mjs';
 import { setupModal, openModal } from './modal.mjs';
 
 document.addEventListener('DOMContentLoaded', () => {
-    setupNavigation();
-    addVisitCount();
     setupModal();
 
     const projectsContainer = document.getElementById('projects-container');
