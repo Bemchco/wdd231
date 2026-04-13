@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - REMIS</title>
-    <meta name="description" content="Get in touch with REMIS to request a quote or consultation for your next industrial project.">
+    <meta name="description"
+        content="Get in touch with REMIS to request a quote or consultation for your next industrial project.">
     <meta name="author" content="Brandon">
-    
+
     <meta property="og:title" content="Contact REMIS">
     <meta property="og:description" content="Reach out to REMIS for quotes and consultations today.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1542152648-52e6ff56f4d0?w=1200">
     <meta property="og:type" content="website">
 
-    <link rel="icon" href="images/Logo-remis-v6-Isotipo.webp" type="image/webp">
-    
+    <link rel="icon" href="images/logo-remis-v6-isotipo.webp" type="image/webp">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/main.css">
-    
+    <link rel="stylesheet" href="styles/main-larger.css">
+
     <script type="module">
         import { setupNavigation } from './scripts/main.mjs';
         document.addEventListener('DOMContentLoaded', () => {
             setupNavigation();
-            
+
             // Local Storage form save to populate next pages or restore
             const formInputs = document.querySelectorAll('.contact-form input[type="text"], .contact-form input[type="email"], .contact-form input[type="tel"]');
             formInputs.forEach(input => {
                 const saved = localStorage.getItem(`form-${input.id}`);
                 if (saved) input.value = saved;
-                
+
                 input.addEventListener('input', () => {
                     localStorage.setItem(`form-${input.id}`, input.value);
                 });
@@ -39,6 +42,7 @@
         });
     </script>
 </head>
+
 <body>
     <header>
         <div class="logo-container">
@@ -54,8 +58,9 @@
 
     <main>
         <h1>Contact REMIS</h1>
-        <p style="text-align:center;">Fill out the form below to request a quote or an initial consultation. Our experts will get back to you shortly.</p>
-        
+        <p style="text-align:center;">Fill out the form below to request a quote or an initial consultation. Our experts
+            will get back to you shortly.</p>
+
         <form action="thankyou.html" method="GET" class="contact-form">
             <fieldset>
                 <legend>Personal Information</legend>
@@ -69,7 +74,8 @@
                 </div>
                 <div class="form-group">
                     <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                    <input type="email" id="email" name="email" required
+                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone Number</label>
@@ -113,4 +119,5 @@
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
+
 </html>

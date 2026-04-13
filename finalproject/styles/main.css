@@ -366,41 +366,4 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Larger Screens */
-@media (min-width: 768px) {
-  header {
-    padding: 1rem 2rem;
-  }
-  #menuButton {
-    display: none;
-  }
-  #navMenu {
-    position: static;
-    display: flex;
-    flex-direction: row;
-    max-height: none;
-    width: auto;
-    background-color: transparent;
-  }
-  #navMenu a {
-    border: none;
-    color: var(--primary-color);
-    padding: 0.5rem 1rem;
-    margin-left: 0.5rem;
-    border-radius: 4px;
-  }
-  #navMenu a:hover {
-    background-color: var(--secondary-color);
-    color: var(--white);
-  }
-  #navMenu a.active {
-    background-color: var(--primary-color);
-    color: var(--white);
-  }
-  .hero h1 {
-    font-size: 3rem;
-  }
-  .hero picture img {
-    height: 400px;
-  }
-}
+

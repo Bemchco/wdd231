@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Gallery - REMIS</title>
-    <meta name="description" content="View the gallery of projects successfully completed by REMIS including construction, installation, and maintenance.">
+    <meta name="description"
+        content="View the gallery of projects successfully completed by REMIS including construction, installation, and maintenance.">
     <meta name="author" content="Brandon">
-    
+
     <meta property="og:title" content="REMIS Project Gallery">
     <meta property="og:description" content="Explore our portfolio of top-tier industrial solutions.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1542152648-52e6ff56f4d0?w=1200">
     <meta property="og:type" content="website">
 
-    <link rel="icon" href="images/Logo-remis-v6-Isotipo.webp" type="image/webp">
-    
+    <link rel="icon" href="images/logo-remis-v6-isotipo.webp" type="image/webp">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/main.css">
-    
+    <link rel="stylesheet" href="styles/main-larger.css">
+
     <script type="module" src="scripts/projects.mjs"></script>
 </head>
+
 <body>
     <header>
         <div class="logo-container">
@@ -38,8 +42,9 @@
 
     <main>
         <h1>Our Previous Projects</h1>
-        <p>Explore our wide range of successful industrial interventions. Use the buttons below to filter by project type.</p>
-        
+        <p>Explore our wide range of successful industrial interventions. Use the buttons below to filter by project
+            type.</p>
+
         <div class="controls">
             <button class="filter-btn active" data-filter="All">All Projects</button>
             <button class="filter-btn" data-filter="Construction">Construction</button>
@@ -56,7 +61,8 @@
         <dialog id="project-modal">
             <div class="dialog-content">
                 <button id="close-modal" class="close-btn" aria-label="Close modal">×</button>
-                <img id="modal-image" src="" alt="" style="width:100%; height:250px; object-fit:cover; margin-bottom:1rem; border-radius:4px;">
+                <img id="modal-image" src="" alt=""
+                    style="width:100%; height:250px; object-fit:cover; margin-bottom:1rem; border-radius:4px;">
                 <h2 id="modal-title">Project Title</h2>
                 <p id="modal-client" style="font-weight:bold;"></p>
                 <p id="modal-type"></p>
@@ -75,4 +81,5 @@
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
+
 </html>
