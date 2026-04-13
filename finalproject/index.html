@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REMIS - Professional Industrial Solutions & Services</title>
+    <meta name="description"
+        content="REMIS offers top professional engineering, maintenance, and construction solutions. View our vision and projects.">
+    <meta name="author" content="Brandon">
+
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="REMIS Industrial Solutions">
+    <meta property="og:description" content="We build and maintain the future of industry. Connect with REMIS today.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo-remis-v6-isotipo.webp" type="image/webp">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+
+    <!-- Default entry point since main.mjs alone doesn't trigger everything on home unless imported by projects.mjs, but we'll import it -->
+    <script type="module">
+        import { setupNavigation } from './scripts/main.mjs';
+        import { addVisitCount } from './scripts/storage.mjs';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setupNavigation();
+            addVisitCount();
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo-remis-v1.webp" alt="REMIS Logo" class="logo-img">
+        </div>
+        <button id="menuButton" aria-label="Toggle Navigation">☰</button>
+        <nav id="navMenu">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <img src="https://images.unsplash.com/photo-1542152648-52e6ff56f4d0?auto=format&fit=crop&w=1200&q=80"
+                    alt="REMIS Factory Overview" loading="lazy">
+            </picture>
+            <div class="hero-content">
+                <h1>Engineering the Future</h1>
+                <a href="projects.html" class="btn">View Our Work</a>
+                <a href="contact.html" class="btn">Get a Quote</a>
+            </div>
+        </div>
+
+        <section class="vision-section">
+            <h2>Our Vision</h2>
+            <p>At REMIS, we align our engineering expertise with your operational goals. We are committed to providing
+                professional, high-quality industrial solutions that drive efficiency, safety, and innovation. We
+                specialize in comprehensive structural consulting, machinery installation, and systemic maintenance.
+                From expanding factory floors to optimizing advanced robotic assemblies, REMIS stands as your reliable
+                partner in industrial progress.</p>
+        </section>
+
+        <section class="about-section">
+            <h2>Why Choose REMIS?</h2>
+            <p>We blend deep industry knowledge with a commitment to long-term sustainability and performance. Our team
+                of experts works closely with you to understand your unique challenges, ensuring every project is
+                delivered on time, securely, and properly aligned with current industry standards.</p>
+        </section>
+
+        <div id="visit-stats"></div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year">2026</span> REMIS. All rights reserved.</p>
+        <p><a href="attributions.html">Resource Attributions</a></p>
+    </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
