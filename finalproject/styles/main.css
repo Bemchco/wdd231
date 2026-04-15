@@ -432,7 +432,7 @@ footer a {
 }
 
 footer a:hover {
-  text-decoration: underline;
+  color: var(--white);
 }
 
 /* Transferred Inline Styles */
@@ -443,7 +443,7 @@ footer a:hover {
   text-align: left;
   max-width: 600px;
   margin: 0 auto;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .thankyou-title {
